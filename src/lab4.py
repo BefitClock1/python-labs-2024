@@ -22,9 +22,9 @@ class Farm:
         print(f"Кількість тварин {self.__animal_count}шт")
     def get_farm_power_vent(self):
         print(f"Потужність вентиляторів {self.__power_vent}Ват")
-    def __str__(self):                                                                                                                                                                              #Перевизначення str
+    def __str__(self):                                                                                                                                                                            
         return f"Локація ферми:{self.__location}, Кількість тварин:{self.__animal_count}, потужність вентилятора:{self.__power_vent}, відвідувань{self.__farm_visiting}"
-    def __repr__(self):                                                                                                                                                                             # перевизначення repr
+    def __repr__(self):                                                                                                                                                                            
         return f"Farm(location='{self.__location}', animal_count={self.__animal_count}, power_vent={self.__power_vent})"
     def __del__(self):
         print("Farm deleted")
