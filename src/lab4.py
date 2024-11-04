@@ -1,9 +1,6 @@
 class Farm:
-    Animal_owner = ""
-    Animal_squad_count = 0
     
     def __init__(self, location, animal_count, power_vent, farm_visiting = 0):
-        #Приватні поля
         self.__location = location  
         self.__animal_count = animal_count  
         self.__power_vent = power_vent 
@@ -31,8 +28,8 @@ class Farm:
         return f"Farm(location='{self.__location}', animal_count={self.__animal_count}, power_vent={self.__power_vent})"
     def __del__(self):
         print("Farm deleted")
-    def max_visiting(farms):
-        return max(farms, key=lambda farm: farm.__farm_visiting)
+def max_visiting(farms):
+    return max(farms, key=lambda farm: farm.__farm_visiting)
 
 def main():
     farm1 = Farm("Ukraine", 10, 50, 10)
