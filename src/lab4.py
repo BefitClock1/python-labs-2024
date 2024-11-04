@@ -39,13 +39,6 @@ def main():
     
     farms = [farm1, farm2, farm3]
 
-
-    
-    #print(Farm1)
-    #print(Farm1.get_farm_visiting())
-    #Farm1.set_farm_visiting(2)
-    #print(Farm1)
-    #print(Farm1.get_farm_visiting())
     max_visiting_farm = Farm.max_visiting(farms)
     print("Ферма з найбільшою кількістю відвідувань:", max_visiting_farm)
 
