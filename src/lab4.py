@@ -6,7 +6,7 @@ class Farm:
         self.__power_vent = power_vent 
         self.__farm_visiting = farm_visiting  
         
-    def constructor(farm):
+    def __init__(farm):
         return farm("Unknown", 0, 0)
         
     def get_farm_visiting(self):
