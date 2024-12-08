@@ -5,29 +5,38 @@ class Farm:
         self.__animal_count = animal_count  
         self.__power_vent = power_vent 
         self.__farm_visiting = farm_visiting  
-    def default_constructor(farm):
+        
+    def constructor(farm):
         return farm("Unknown", 0, 0)
+        
     def get_farm_visiting(self):
         if self.__farm_visiting.is_integer():
             print(f"кількість відвідувань{self.__farm_visiting}")
         else:
             print("відвідуваність має бути число")
+            
     def set_farm_visiting(self, new_v):
         self.__farm_visiting += new_v
 
     
     def get_farm_location(self):
         print(f"Розташуваня ферми {self.__location}")
+        
     def get_farm_animal_count(self):
         print(f"Кількість тварин {self.__animal_count}шт")
+        
     def get_farm_power_vent(self):
         print(f"Потужність вентиляторів {self.__power_vent}Ват")
+        
     def __str__(self):                                                                                                                                                                            
         return f"Локація ферми:{self.__location}, Кількість тварин:{self.__animal_count}, потужність вентилятора:{self.__power_vent}, відвідувань{self.__farm_visiting}"
+        
     def __repr__(self):                                                                                                                                                                            
         return f"Farm(location='{self.__location}', animal_count={self.__animal_count}, power_vent={self.__power_vent})"
+        
     def __del__(self):
         print("Farm deleted")
+        
 def max_visiting(farms):
     return max(farms, key=lambda farm: farm.__farm_visiting)
 
